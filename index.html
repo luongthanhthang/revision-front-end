@@ -22,25 +22,24 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <!-- <body onload="getCookieOnload()"> -->
-  <body>
+  <body onload="getCookieSidebar('sidebarChange')">
     <div class="main">
-      <div class="sidebar" id="sidebar">
+      <aside  class="" id="sidebar">
         <div class="logo-details">
-          <div id="change">
+          <div>
             <i onclick="changeSidebar()" class="fa-solid fa-bars"></i>
           </div>
           <span class="logo-name link-name">
             Quý I - 2023 &nbsp; <i class="fa-solid fa-caret-down"></i>
+            <ul class="sub-menu-top">
+              <li>Quý I - 2023</li>
+              <li>Quý IV - 2022</li>
+              <li>Quý III - 2022</li>
+              <li>Quý II - 2022</li>
+              <li>Quý I - 2022</li>
+              <li>Quý IV - 2021</li>
+            </ul>
           </span>
-          <ul class="sub-menu">
-            <li>Quý I - 2023</li>
-            <li>Quý IV - 2022</li>
-            <li>Quý III - 2022</li>
-            <li>Quý II - 2022</li>
-            <li>Quý I - 2022</li>
-            <li>Quý IV - 2021</li>
-          </ul>
         </div>
 
         <ul class="nav-links">
@@ -81,14 +80,14 @@
           </li>
 
           <li>
-            <div class="icon-links" onclick="displaySubMenu('OKRs')">
+            <div class="icon-links">
               <a>
                 <i class="fa-solid fa-bullseye"></i>
                 <span class="link-name">OKRs</span>
               </a>
               <i class="fa-solid fa-caret-right"></i>
             </div>
-            <ul class="OKRs-sub-menu">
+            <ul class="sub-menu">
               <li><a>Thiết lập</a></li>
               <li><a>Hành động</a></li>
               <li><a>Tổng quan</a></li>
@@ -96,14 +95,14 @@
           </li>
 
           <li>
-            <div class="icon-links" onclick="displaySubMenu('CFRs')">
+            <div class="icon-links">
               <a>
                 <i class="fa-regular fa-star"></i>
                 <span class="link-name">CFRs</span>
               </a>
               <i class="fa-solid fa-caret-right"></i>
             </div>
-            <ul class="CFRs-sub-menu">
+            <ul class="sub-menu">
               <li><a>Check-in</a></li>
               <li><a>Ghi nhận - Tặng sao</a></li>
             </ul>
@@ -119,28 +118,30 @@
           </li>
 
           <li>
-            <div class="icon-links" onclick="displaySubMenu('gift')">
+            <div class="icon-links">
               <a>
                 <i class="fa-solid fa-gift"></i>
                 <span class="link-name">Đổi quà</span>
               </a>
               <i class="fa-solid fa-caret-right"></i>
             </div>
-            <ul class="gift-sub-menu">
-              <li><a>Cửa hàng</a></li>
+            <ul class="sub-menu">
+              <li>
+                <a>Cửa hàng</a>
+              </li>
               <li><a>Lịch sử đổi quà</a></li>
             </ul>
           </li>
 
           <li>
-            <div class="icon-links" onclick="displaySubMenu('course')">
+            <div class="icon-links">
               <a>
                 <i class="fa-solid fa-book"></i>
                 <span class="link-name">Đào tạo</span>
               </a>
               <i class="fa-solid fa-caret-right"></i>
             </div>
-            <ul class="course-sub-menu">
+            <ul class="sub-menu">
               <li>
                 <a>Khoá học</a>
               </li>
@@ -161,15 +162,15 @@
           </li>
         </ul>
 
-        <li class="sign-out">
+        <div class="sign-out">
           <div class="icon-links">
             <a>
               <i class="fa-solid fa-right-from-bracket"></i>
               <span class="link-name">Đăng xuất</span>
             </a>
           </div>
-        </li>
-      </div>
+        </div>
+      </aside>
 
       <div class="content">
         <div class="header">
