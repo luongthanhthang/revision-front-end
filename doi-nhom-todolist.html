@@ -624,7 +624,7 @@
                       </div>
                     </td>
                   </tr> -->
-                  <tr class="add-work">
+                  <!-- <tr class="add-work">
                     <td>
                       <input
                         id="name-work-form"
@@ -886,31 +886,31 @@
                         <div class="dropdown-menu">
                           <div class="dropdown-content">
                             <div
-                              onclick="changeColorStatusWork(this)"
+                              onclick="updateStatusWork(this)"
                               class="dropdown-item"
                             >
                               Todo
                             </div>
                             <div
-                              onclick="changeColorStatusWork(this)"
+                              onclick="updateStatusWork(this)"
                               class="dropdown-item"
                             >
                               Pending
                             </div>
                             <div
-                              onclick="changeColorStatusWork(this)"
+                              onclick="updateStatusWork(this)"
                               class="dropdown-item"
                             >
                               Doing
                             </div>
                             <div
-                              onclick="changeColorStatusWork(this)"
+                              onclick="updateStatusWork(this)"
                               class="dropdown-item"
                             >
                               Done
                             </div>
                             <div
-                              onclick="changeColorStatusWork(this)"
+                              onclick="updateStatusWork(this)"
                               class="dropdown-item"
                             >
                               Cancel
@@ -963,7 +963,7 @@
                         </div>
                       </div>
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
 
@@ -973,8 +973,7 @@
                 </div>
                 <div class="control">
                   <div
-                    onclick="document.querySelector('.table-todolist .add-work').classList.toggle('is-active-table');
-                    document.querySelector('.table-todolist .detail-add-work').classList.toggle('is-active-table')"
+                    onclick="showFormCreate()"
                     class="click box-shadow add button-control"
                   >
                     <span class="icon material-icons material-symbols-outlined">

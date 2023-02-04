@@ -75,6 +75,11 @@ img {
   height: 100%;
 }
 
+.todo-status {
+  background-color: white !important;
+  color: black !important;
+}
+
 .done-status {
   background-color: #3ec487 !important;
   color: white !important;
@@ -133,7 +138,8 @@ img {
   font-weight: 350 !important;
 }
 
-.icon-color {
+.icon-color,
+.yellow-text {
   color: #e5bf54 !important;
 }
 
@@ -232,7 +238,6 @@ img {
 
 .logo-details {
   position: relative;
-  height: 60px;
   padding: 0 0.5rem;
   width: 100%;
   display: flex;
@@ -360,7 +365,6 @@ img {
 .sub-menu-top {
   display: none;
   transition: 0.3s;
-  padding-left: 1.5rem;
   padding-top: 0.5rem;
   list-style: none;
   padding-left: 1.25rem;
@@ -430,7 +434,6 @@ img {
 
 .sidebar-small .logo-details {
   position: relative;
-  height: 60px;
   padding: 0 0.5rem;
   width: 100%;
   display: flex;
@@ -1126,9 +1129,9 @@ img {
   display: block !important;
 }
 
-.is-active-table {
+/* .is-active-table {
   display: table-row !important;
-}
+} */
 
 .todo-list .name-member:hover {
   background-color: #f1f7f7;
@@ -1393,7 +1396,6 @@ img {
 
 .table-todolist > tbody > tr > td {
   padding: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .table-todolist > tbody > tr:nth-child(odd) > td:first-child {
@@ -1483,6 +1485,7 @@ img {
 .table-todolist > tbody > tr:nth-child(even) td {
   border-bottom: 1px solid #dbdbdb;
   position: relative;
+  height: 35px;
 }
 
 .table-todolist > tbody > tr:nth-child(even) td .control {
@@ -1516,11 +1519,6 @@ img {
 
   width: 100%;
   padding: 0.3rem 0.594rem;
-}
-
-.table-todolist .add-work,
-.table-todolist .detail-add-work {
-  display: none;
 }
 
 .table-todolist .add-work .work-status {
