@@ -46,32 +46,32 @@ function controlTodoList(todoLists) {
                     <div class="dropdown-menu">
                       <div class="dropdown-content">
                         <div
-                          onclick="updateStatusWork(this)"
+                          onclick="updateStatusWork(this, ${index})"
                           class="dropdown-item"
                         >
                           Todo
                         </div>
                         <div
-                          onclick="updateStatusWork(this)"
-                          class="dropdown-item"
+                        onclick="updateStatusWork(this, ${index})"
+                        class="dropdown-item"
                         >
                           Pending
                         </div>
                         <div
-                          onclick="updateStatusWork(this)"
-                          class="dropdown-item"
+                        onclick="updateStatusWork(this, ${index})"
+                        class="dropdown-item"
                         >
                           Doing
                         </div>
                         <div
-                          onclick="updateStatusWork(this)"
-                          class="dropdown-item"
+                        onclick="updateStatusWork(this, ${index})"
+                        class="dropdown-item"
                         >
                           Done
                         </div>
                         <div
-                          onclick="updateStatusWork(this)"
-                          class="dropdown-item"
+                        onclick="updateStatusWork(this, ${index})"
+                        class="dropdown-item"
                         >
                           Cancel
                         </div>
@@ -93,7 +93,7 @@ function controlTodoList(todoLists) {
                       </div>
                     </td>
                     <td colspan="3">
-                      <div class="control">
+                      <div class="control" onclick ="showFormEdit(this)">
                         <div class="click edit blue-text" onclick="showFormUpdate(${index})">
                           <span
                             class="icon material-icons material-symbols-outlined"
@@ -134,6 +134,7 @@ function controlTodoList(todoLists) {
       item.previousElementSibling.style.display = "none";
     }
   });
+  changeColorStatus();
 }
 
 function setCookie(cname, cvalue) {
@@ -313,7 +314,7 @@ function showFormCreate() {
         <span>Cập nhật</span>
       </div>
 
-      <div class="click remove red-text">
+      <div onclick="deleteFormCreate(this)" class="click remove red-text">
         <span
           class="icon material-icons material-symbols-outlined"
         >
@@ -330,25 +331,38 @@ function showFormCreate() {
   changeColorPriority();
 }
 
+function deleteFormCreate(elementDelete) {
+  elementDelete.parentElement.parentElement.parentElement.previousElementSibling.remove();
+  elementDelete.parentElement.parentElement.parentElement.remove();
+}
+
 function create(selectElementCreate) {
   let elementCreateAddWork =
     selectElementCreate.parentElement.parentElement.parentElement
       .previousElementSibling;
   let elementCreateDetailAddWork =
     selectElementCreate.parentElement.parentElement.parentElement;
-  console.log(elementCreateAddWork);
-  console.log(
-    elementCreateAddWork.getElementsByClassName(".start-time-work-form")
-  );
 
-  let nameWorkForm = elementCreateAddWork.querySelector(".name-work-form").value;
-  let categoryWorkForm = elementCreateAddWork.querySelector(".category-work-form").value;
-  let priorityWorkForm = elementCreateAddWork.querySelector(".priority-work-form").value;
-  let startTimeWorkForm = elementCreateAddWork.querySelector(".start-time-work-form").value;
-  let endTimeWorkForm = elementCreateAddWork.querySelector(".end-time-work-form").value;
-  let detailWorkForm = elementCreateDetailAddWork.querySelector(".detail-work-form").value;
-  let resultWorkForm = elementCreateDetailAddWork.querySelector(".result-work-form").value;
-  let statusWorkValue = elementCreateAddWork.querySelector(".status-work-value").innerText;
+  let nameWorkForm =
+    elementCreateAddWork.querySelector(".name-work-form").value;
+  let categoryWorkForm = elementCreateAddWork.querySelector(
+    ".category-work-form"
+  ).value;
+  let priorityWorkForm = elementCreateAddWork.querySelector(
+    ".priority-work-form"
+  ).value;
+  let startTimeWorkForm = elementCreateAddWork.querySelector(
+    ".start-time-work-form"
+  ).value;
+  let endTimeWorkForm = elementCreateAddWork.querySelector(
+    ".end-time-work-form"
+  ).value;
+  let detailWorkForm =
+    elementCreateDetailAddWork.querySelector(".detail-work-form").value;
+  let resultWorkForm =
+    elementCreateDetailAddWork.querySelector(".result-work-form").value;
+  let statusWorkValue =
+    elementCreateAddWork.querySelector(".status-work-value").innerText;
 
   // validate
   if (nameWorkForm === "") {
@@ -387,34 +401,66 @@ function deleteTodoList(id) {
   controlTodoList(todoLists);
 }
 
-// background-color status-work
-function updateStatusWork(elementChange) {
-    let parentElement = elementChange.parentElement.parentElement.parentElement;
-  parentElement.getElementsByClassName("status-work-value")[0].innerText =
-    elementChange.innerText;
-  changeColorStatus(parentElement);
+function showFormEdit(elementEdit){
+  console.log(elementEdit.parentElement.parentElement.previousElementSibling);
 }
 
-function changeColorStatus(elementChange) {
-  switch (
-    elementChange.getElementsByClassName("status-work-value")[0].innerText
-  ) {
-    case "Todo":
-      elementChange.setAttribute("class", "dropdown click todo-status");
-      break;
-    case "Done":
-      elementChange.setAttribute("class", "dropdown click done-status");
-      break;
-    case "Doing":
-      elementChange.setAttribute("class", "dropdown click doing-status");
-      break;
-    case "Pending":
-      elementChange.setAttribute("class", "dropdown click pending-status");
-      break;
-    case "Cancel":
-      elementChange.setAttribute("class", "dropdown click cancel-status");
-      break;
+// background-color status-work
+function updateStatusWork(elementChange, idElement = -1) {
+  let todoLists = localStorage.getItem("todoLists")
+    ? JSON.parse(localStorage.getItem("todoLists"))
+    : [];
+
+  if (idElement != -1) {
+    todoLists[idElement].statusWorkValue = elementChange.innerText;
+    localStorage.setItem("todoLists", JSON.stringify(todoLists));
+    controlTodoList(todoLists);
+  } else {
+    elementChange.parentElement.parentElement.parentElement.querySelector(
+      ".status-work-value"
+    ).innerText = elementChange.innerText;
+    changeColorStatus();
   }
+}
+
+function changeColorStatus() {
+  document
+    .getElementById("view-todolist")
+    .querySelectorAll(".status-work-value")
+    .forEach((item) => {
+      switch (item.innerText) {
+        case "Todo":
+          item.parentElement.parentElement.setAttribute(
+            "class",
+            "dropdown click todo-status"
+          );
+          break;
+        case "Done":
+          item.parentElement.parentElement.setAttribute(
+            "class",
+            "dropdown click done-status"
+          );
+          break;
+        case "Doing":
+          item.parentElement.parentElement.setAttribute(
+            "class",
+            "dropdown click doing-status"
+          );
+          break;
+        case "Pending":
+          item.parentElement.parentElement.setAttribute(
+            "class",
+            "dropdown click pending-status"
+          );
+          break;
+        case "Cancel":
+          item.parentElement.parentElement.setAttribute(
+            "class",
+            "dropdown click cancel-status"
+          );
+          break;
+      }
+    });
 }
 
 function changeColorPriority() {

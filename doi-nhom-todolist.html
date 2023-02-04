@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Đào tạo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/e1f8756e73.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="getCookieSidebar('sidebarChange')">
+    <div class="main">
+      <aside class="" id="sidebar">
+        <div class="logo-details">
+          <div>
+            <i onclick="changeSidebar()" class="fa-solid fa-bars"></i>
+          </div>
+          <span class="logo-name link-name">
+            Quý I - 2023 &nbsp; <i class="fa-solid fa-caret-down"></i>
+            <ul class="sub-menu-top">
+              <li>Quý I - 2023</li>
+              <li>Quý IV - 2022</li>
+              <li>Quý III - 2022</li>
+              <li>Quý II - 2022</li>
+              <li>Quý I - 2022</li>
+              <li>Quý IV - 2021</li>
+            </ul>
+          </span>
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-newspaper"></i>
+                <span class="link-name">Tin tức</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-chart-simple"></i>
+                <span class="link-name">Thống kê</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-people-group"></i>
+                <span class="link-name">Đội nhóm</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-regular fa-square-check"></i>
+                <span class="link-name">Todolist</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-bullseye"></i>
+                <span class="link-name">OKRs</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a>Thiết lập</a></li>
+              <li><a>Hành động</a></li>
+              <li><a>Tổng quan</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-regular fa-star"></i>
+                <span class="link-name">CFRs</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a>Check-in</a></li>
+              <li><a>Ghi nhận - Tặng sao</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-bolt"></i>
+                <span class="link-name">Kaizen</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-gift"></i>
+                <span class="link-name">Đổi quà</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li>
+                <a>Cửa hàng</a>
+              </li>
+              <li><a>Lịch sử đổi quà</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-book"></i>
+                <span class="link-name">Đào tạo</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li>
+                <a>Khoá học</a>
+              </li>
+              <li><a>Quản lý khoá học</a></li>
+              <li><a>Chấm bài thi</a></li>
+              <li><a>Cấp chứng chỉ</a></li>
+              <li><a>Chứng chỉ đạt được</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-person"></i>
+                <span class="link-name">Tài khoản</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="sign-out">
+          <div class="icon-links">
+            <a>
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span class="link-name">Đăng xuất</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <header class="header">
+          <ul class="header-info">
+            <li class="avatar">
+              <div class="img-24x24">
+                <img
+                  src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="name">
+              <span>Lương Thanh Thắng</span>
+            </li>
+          </ul>
+
+          <ul class="notification">
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+          </ul>
+        </header>
+
+        <section class="todo-list content-main">
+          <div class="content-left">
+            <div class="card-team">
+              <div class="user-item">
+                <div class="content">
+                  <img
+                    class="img-24x24 avatar"
+                    src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                    alt=""
+                  />
+                  <span class="text"> Cá nhân </span>
+                  <span class="icon material-icons material-symbols-outlined">
+                    dashboard_customize
+                  </span>
+                </div>
+              </div>
+
+              <hr style="margin: 0.75rem 0" />
+
+              <div class="list-team">
+                <ul>
+                  <li class="name-team">
+                    <span class="click"> CONANDO </span>
+                    <span
+                      class="load-more-member-list click material-icons material-symbols-outlined"
+                    >
+                      chevron_right
+                    </span>
+                  </li>
+
+                  <ul class="list-member">
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/221227/22CR7EDCEE.jpg"
+                          alt=""
+                        />
+                        <span>Đan Trường Nguyễn</span>
+                      </div>
+                    </li>
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220223/637812349690327647.jpg"
+                          alt=""
+                        />
+                        <span>Nguyễn Hữu Học</span>
+                      </div>
+                    </li>
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+                        <span>Đặng Thị Thuý Diễm</span>
+                      </div>
+                    </li>
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Trần Xuân Tấn</span>
+                      </div>
+                    </li>
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Nguyễn Văn Thành</span>
+                      </div>
+                    </li>
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+                        <span>Trần Thị Diệp Anh</span>
+                      </div>
+                    </li>
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+                        <span>Hoàng Thị Phương Thảo</span>
+                      </div>
+                    </li>
+
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Lê Quang Huy</span>
+                      </div>
+                    </li>
+
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Nguyễn Quân</span>
+                      </div>
+                    </li>
+
+                    <li class="name-member">
+                      <div class="item" class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Trương Thị Kim Nguyên</span>
+                      </div>
+                    </li>
+
+                    <li class="name-member" style="background-color: #f1f7f7">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+                        <span style="color: #4468b0; font-weight: bold"
+                          >Lương Thanh Thắng</span
+                        >
+                      </div>
+                    </li>
+
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+                        <span>Cao Trương Mỹ Duyên</span>
+                      </div>
+                    </li>
+
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Hoàng Thị Phương Thảo</span>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+
+                <ul>
+                  <li class="name-team click">
+                    <span> Team Dev </span>
+                    <span
+                      class="load-more-member-list material-icons material-symbols-outlined"
+                    >
+                      chevron_right
+                    </span>
+                  </li>
+                  <ul class="list-member">
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+                        <span>Lương Thanh Thắng</span>
+                      </div>
+                    </li>
+
+                    <li class="name-member">
+                      <div class="item">
+                        <img
+                          class="img-24x24 avatar"
+                          src="https://work.conando.vn/upload/220615/226F9FAE77.jpg"
+                          alt=""
+                        />
+                        <span>Lương Thanh Thắng</span>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="title box-shadow">
+              <ul>
+                <li class="info">
+                  <div class="user-item">
+                    <img
+                      class="avatar"
+                      src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                      alt=""
+                    />
+
+                    <div class="content-info">
+                      <div class="name blue-text">Lương Thanh Thắng</div>
+                      <div class="team">
+                        DOCORP / CONANDO / Team Dev
+                        <span
+                          onclick="document.querySelector('.todo-list .content-right .title .detail-dropdown').classList.toggle('is-active')"
+                          class="click blue-text material-icons icon material-symbols-outlined"
+                        >
+                          play_arrow
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="title-item">
+                  <span class="title-name">OKRs</span>
+                </li>
+
+                <li class="title-item">
+                  <span class="title-name">Todolist</span>
+                </li>
+
+                <li class="title-item">
+                  <span class="title-name">Kế hoạch</span>
+                </li>
+
+                <li class="title-item">
+                  <span class="title-name">Thành tựu</span>
+                </li>
+              </ul>
+
+              <div class="detail-dropdown box-shadow">
+                <div>
+                  <p class="uppercase">DOCORP</p>
+                  <p>
+                    <i class="fa-solid fa-l"></i>
+                    <span class="uppercase">&nbsp;&nbsp;CONANDO</span>
+                  </p>
+                  <p>
+                    &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-l"></i>
+                    <span>&nbsp;&nbsp;Team dev</span>
+                  </p>
+                </div>
+                <ul class="list-achievements">
+                  <li class="title-item">
+                    <span
+                      class="blue-text icon material-icons material-icons-outlined"
+                    >
+                      star_border
+                    </span>
+                    <span class="blue-text">0</span>
+                    <p>Sao được cấp</p>
+                  </li>
+                  <li class="title-item">
+                    <span
+                      class="green-text icon material-icons material-icons-outlined"
+                    >
+                      star_border
+                    </span>
+                    <span class="green-text">30</span>
+                    <p>Sao của bạn</p>
+                  </li>
+                  <li class="title-item">
+                    <span
+                      class="green-text icon material-icons material-icons-outlined"
+                    >
+                      trending_up
+                    </span>
+                    <span class="green-text">0</span>
+                    <p>Kaizen giúp ích</p>
+                  </li>
+                  <li class="title-item">
+                    <span
+                      class="red-text icon material-icons material-icons-outlined"
+                    >
+                      verified
+                    </span>
+                    <span class="red-text">0</span>
+                    <p>Chứng chỉ đã đạt</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="advice">
+              <i>
+                Hãy làm việc bằng chính tình yêu và lòng đam mê nghề, để mỗi
+                ngày chúng ta cùng rong chơi với nó, chứ không phải " đi làm "
+                !!"</i
+              >
+              <i> — Sưu Tầm </i>
+            </div>
+
+            <div class="todolist-detail box-shadow">
+              <ul>
+                <li class="title">
+                  <h1 class="title-name">CHI TIẾT TODOLIST</h1>
+                  <i>Lựa chọn ngày phù hợp và tạo list công việc</i>
+                </li>
+                <li class="calendar">
+                  <div class="calendar-item">
+                    <span
+                      class="material-icons material-symbols-outlined blue-text"
+                    >
+                      calendar_month
+                    </span>
+                    <span> T3 - 31/01/2023 </span>
+                  </div>
+                  <div class="calendar-back">
+                    <span
+                      class="material-icons material-symbols-outlined blue-text"
+                    >
+                      arrow_back_ios
+                    </span>
+                  </div>
+                  <div class="calendar-forward">
+                    <span
+                      class="material-icons material-symbols-outlined blue-text"
+                    >
+                      arrow_forward_ios
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <table class="table-todolist">
+                <thead>
+                  <tr>
+                    <th>Danh sách công việc</th>
+                    <th>Phân loại</th>
+                    <th>Độ ưu tiên</th>
+                    <th>Bắt đầu</th>
+                    <th>Kết thúc</th>
+                    <th>Tình trạng</th>
+                  </tr>
+                </thead>
+                <tbody id="view-todolist">
+                  <!-- <tr>
+                    <td class="blue-text">Ôn tập phần lập trình giao diện</td>
+                    <td>Kế hoạch</td>
+                    <td>Bình thường</td>
+                    <td>08:30</td>
+                    <td>17:30</td>
+                    <td>
+                      <div class="dropdown click">
+                        <div class="dropdown-trigger">
+                          <span> Todo </span>
+                          <span
+                            class="material-icons material-symbols-outlined"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </div>
+                        <div class="dropdown-menu">
+                          <div class="dropdown-content">
+                            <p class="dropdown-item">Todo</p>
+                            <p class="dropdown-item">Pending</p>
+                            <p class="dropdown-item">Doing</p>
+                            <p class="dropdown-item">Done</p>
+                            <p class="dropdown-item">Cancel</p>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="3">
+                      <div>
+                        <span>Chi tiết:</span>
+                        <span>Sử dụng Local Storage làm database</span>
+                      </div>
+                      <div>
+                        <span>Kết quả:</span>
+                        <span>Sử dụng Local Storage làm database</span>
+                      </div>
+                    </td>
+                    <td colspan="3">
+                      <div class="control">
+                        <div class="edit blue-text">
+                          <span
+                            class="icon material-icons material-symbols-outlined"
+                          >
+                            edit
+                          </span>
+                          <span>Chỉnh sửa</span>
+                        </div>
+
+                        <div class="remove red-text">
+                          <span
+                            class="icon material-icons material-symbols-outlined"
+                          >
+                            delete
+                          </span>
+                          <span>Xoá</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr> -->
+                  <!-- <tr class="add-work">
+                    <td>
+                      <input
+                        id="name-work-form"
+                        class="box-shadow-5px"
+                        type="text"
+                        placeholder="Nhập tên công việc"
+                      />
+                    </td>
+                    <td>
+                      <div class="work-status box-shadow-5px">
+                        <select name="" id="category-work-form">
+                          <option value="Kế hoạch" selected>Kế hoạch</option>
+                          <option value="Cấp trên giao">Cấp trên giao</option>
+                          <option value="Đột xuất">Đột xuất</option>
+                        </select>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="work-status box-shadow-5px">
+                        <select name="" id="priority-work-form">
+                          <option value="Bình thường" selected>
+                            Bình thường
+                          </option>
+                          <option value="Quan trọng">Quan trọng</option>
+                          <option value="Rất quan trọng">Rất quan trọng</option>
+                        </select>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="work-status box-shadow-5px">
+                        <select id="start-time-work-form">
+                          <option value="07:00">07:00</option>
+                          <option value="07:10">07:10</option>
+                          <option value="07:20">07:20</option>
+                          <option value="07:30">07:30</option>
+                          <option value="07:40">07:40</option>
+                          <option value="07:50">07:50</option>
+                          <option value="08:00">08:00</option>
+                          <option value="08:10">08:10</option>
+                          <option value="08:20">08:20</option>
+                          <option value="08:30">08:30</option>
+                          <option value="08:40">08:40</option>
+                          <option value="08:50">08:50</option>
+                          <option value="09:00">09:00</option>
+                          <option value="09:10">09:10</option>
+                          <option value="09:20">09:20</option>
+                          <option value="09:30">09:30</option>
+                          <option value="09:40">09:40</option>
+                          <option value="09:50">09:50</option>
+                          <option value="10:00">10:00</option>
+                          <option value="10:10">10:10</option>
+                          <option value="10:20">10:20</option>
+                          <option value="10:30" selected="">10:30</option>
+                          <option value="10:40">10:40</option>
+                          <option value="10:50">10:50</option>
+                          <option value="11:00">11:00</option>
+                          <option value="11:10">11:10</option>
+                          <option value="11:20">11:20</option>
+                          <option value="11:30">11:30</option>
+                          <option value="11:40">11:40</option>
+                          <option value="11:50">11:50</option>
+                          <option value="12:00">12:00</option>
+                          <option value="12:10">12:10</option>
+                          <option value="12:20">12:20</option>
+                          <option value="12:30">12:30</option>
+                          <option value="12:40">12:40</option>
+                          <option value="12:50">12:50</option>
+                          <option value="13:00">13:00</option>
+                          <option value="13:10">13:10</option>
+                          <option value="13:20">13:20</option>
+                          <option value="13:30">13:30</option>
+                          <option value="13:40">13:40</option>
+                          <option value="13:50">13:50</option>
+                          <option value="14:00">14:00</option>
+                          <option value="14:10">14:10</option>
+                          <option value="14:20">14:20</option>
+                          <option value="14:30">14:30</option>
+                          <option value="14:40">14:40</option>
+                          <option value="14:50">14:50</option>
+                          <option value="15:00">15:00</option>
+                          <option value="15:10">15:10</option>
+                          <option value="15:20">15:20</option>
+                          <option value="15:30">15:30</option>
+                          <option value="15:40">15:40</option>
+                          <option value="15:50">15:50</option>
+                          <option value="16:00">16:00</option>
+                          <option value="16:10">16:10</option>
+                          <option value="16:20">16:20</option>
+                          <option value="16:30">16:30</option>
+                          <option value="16:40">16:40</option>
+                          <option value="16:50">16:50</option>
+                          <option value="17:00">17:00</option>
+                          <option value="17:10">17:10</option>
+                          <option value="17:20">17:20</option>
+                          <option value="17:30">17:30</option>
+                          <option value="17:40">17:40</option>
+                          <option value="17:50">17:50</option>
+                          <option value="18:00">18:00</option>
+                          <option value="18:10">18:10</option>
+                          <option value="18:20">18:20</option>
+                          <option value="18:30">18:30</option>
+                          <option value="18:40">18:40</option>
+                          <option value="18:50">18:50</option>
+                          <option value="19:00">19:00</option>
+                          <option value="19:10">19:10</option>
+                          <option value="19:20">19:20</option>
+                          <option value="19:30">19:30</option>
+                          <option value="19:40">19:40</option>
+                          <option value="19:50">19:50</option>
+                          <option value="20:00">20:00</option>
+                          <option value="20:10">20:10</option>
+                          <option value="20:20">20:20</option>
+                          <option value="20:30">20:30</option>
+                          <option value="20:40">20:40</option>
+                          <option value="20:50">20:50</option>
+                          <option value="21:00">21:00</option>
+                          <option value="21:10">21:10</option>
+                          <option value="21:20">21:20</option>
+                          <option value="21:30">21:30</option>
+                          <option value="21:40">21:40</option>
+                          <option value="21:50">21:50</option>
+                          <option value="22:00">22:00</option>
+                          <option value="22:10">22:10</option>
+                          <option value="22:20">22:20</option>
+                          <option value="22:30">22:30</option>
+                          <option value="22:40">22:40</option>
+                          <option value="22:50">22:50</option>
+                          <option value="23:00">23:00</option>
+                          <option value="23:10">23:10</option>
+                          <option value="23:20">23:20</option>
+                          <option value="23:30">23:30</option>
+                          <option value="23:40">23:40</option>
+                          <option value="23:50">23:50</option>
+                        </select>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="work-status box-shadow-5px">
+                        <select id="end-time-work-form">
+                          <option value="07:00">07:00</option>
+                          <option value="07:10">07:10</option>
+                          <option value="07:20">07:20</option>
+                          <option value="07:30">07:30</option>
+                          <option value="07:40">07:40</option>
+                          <option value="07:50">07:50</option>
+                          <option value="08:00">08:00</option>
+                          <option value="08:10">08:10</option>
+                          <option value="08:20">08:20</option>
+                          <option value="08:30">08:30</option>
+                          <option value="08:40">08:40</option>
+                          <option value="08:50">08:50</option>
+                          <option value="09:00">09:00</option>
+                          <option value="09:10">09:10</option>
+                          <option value="09:20">09:20</option>
+                          <option value="09:30">09:30</option>
+                          <option value="09:40">09:40</option>
+                          <option value="09:50">09:50</option>
+                          <option value="10:00">10:00</option>
+                          <option value="10:10">10:10</option>
+                          <option value="10:20">10:20</option>
+                          <option value="10:30" selected="">10:30</option>
+                          <option value="10:40">10:40</option>
+                          <option value="10:50">10:50</option>
+                          <option value="11:00">11:00</option>
+                          <option value="11:10">11:10</option>
+                          <option value="11:20">11:20</option>
+                          <option value="11:30">11:30</option>
+                          <option value="11:40">11:40</option>
+                          <option value="11:50">11:50</option>
+                          <option value="12:00">12:00</option>
+                          <option value="12:10">12:10</option>
+                          <option value="12:20">12:20</option>
+                          <option value="12:30">12:30</option>
+                          <option value="12:40">12:40</option>
+                          <option value="12:50">12:50</option>
+                          <option value="13:00">13:00</option>
+                          <option value="13:10">13:10</option>
+                          <option value="13:20">13:20</option>
+                          <option value="13:30">13:30</option>
+                          <option value="13:40">13:40</option>
+                          <option value="13:50">13:50</option>
+                          <option value="14:00">14:00</option>
+                          <option value="14:10">14:10</option>
+                          <option value="14:20">14:20</option>
+                          <option value="14:30">14:30</option>
+                          <option value="14:40">14:40</option>
+                          <option value="14:50">14:50</option>
+                          <option value="15:00">15:00</option>
+                          <option value="15:10">15:10</option>
+                          <option value="15:20">15:20</option>
+                          <option value="15:30">15:30</option>
+                          <option value="15:40">15:40</option>
+                          <option value="15:50">15:50</option>
+                          <option value="16:00">16:00</option>
+                          <option value="16:10">16:10</option>
+                          <option value="16:20">16:20</option>
+                          <option value="16:30">16:30</option>
+                          <option value="16:40">16:40</option>
+                          <option value="16:50">16:50</option>
+                          <option value="17:00">17:00</option>
+                          <option value="17:10">17:10</option>
+                          <option value="17:20">17:20</option>
+                          <option value="17:30">17:30</option>
+                          <option value="17:40">17:40</option>
+                          <option value="17:50">17:50</option>
+                          <option value="18:00">18:00</option>
+                          <option value="18:10">18:10</option>
+                          <option value="18:20">18:20</option>
+                          <option value="18:30">18:30</option>
+                          <option value="18:40">18:40</option>
+                          <option value="18:50">18:50</option>
+                          <option value="19:00">19:00</option>
+                          <option value="19:10">19:10</option>
+                          <option value="19:20">19:20</option>
+                          <option value="19:30">19:30</option>
+                          <option value="19:40">19:40</option>
+                          <option value="19:50">19:50</option>
+                          <option value="20:00">20:00</option>
+                          <option value="20:10">20:10</option>
+                          <option value="20:20">20:20</option>
+                          <option value="20:30">20:30</option>
+                          <option value="20:40">20:40</option>
+                          <option value="20:50">20:50</option>
+                          <option value="21:00">21:00</option>
+                          <option value="21:10">21:10</option>
+                          <option value="21:20">21:20</option>
+                          <option value="21:30">21:30</option>
+                          <option value="21:40">21:40</option>
+                          <option value="21:50">21:50</option>
+                          <option value="22:00">22:00</option>
+                          <option value="22:10">22:10</option>
+                          <option value="22:20">22:20</option>
+                          <option value="22:30">22:30</option>
+                          <option value="22:40">22:40</option>
+                          <option value="22:50">22:50</option>
+                          <option value="23:00">23:00</option>
+                          <option value="23:10">23:10</option>
+                          <option value="23:20">23:20</option>
+                          <option value="23:30">23:30</option>
+                          <option value="23:40">23:40</option>
+                          <option value="23:50">23:50</option>
+                        </select>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="dropdown click">
+                        <div class="dropdown-trigger">
+                          <span class="status-work-value"> Todo </span>
+                          <span
+                            class="material-icons material-symbols-outlined"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </div>
+                        <div class="dropdown-menu">
+                          <div class="dropdown-content">
+                            <div
+                              onclick="updateStatusWork(this)"
+                              class="dropdown-item"
+                            >
+                              Todo
+                            </div>
+                            <div
+                              onclick="updateStatusWork(this)"
+                              class="dropdown-item"
+                            >
+                              Pending
+                            </div>
+                            <div
+                              onclick="updateStatusWork(this)"
+                              class="dropdown-item"
+                            >
+                              Doing
+                            </div>
+                            <div
+                              onclick="updateStatusWork(this)"
+                              class="dropdown-item"
+                            >
+                              Done
+                            </div>
+                            <div
+                              onclick="updateStatusWork(this)"
+                              class="dropdown-item"
+                            >
+                              Cancel
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="detail-add-work">
+                    <td colspan="3">
+                      <div class="add-detail">
+                        <span class="name">Chi tiết: </span>
+                        <textarea
+                          id="detail-work-form"
+                          class=""
+                          rows="2"
+                          placeholder="Nhập chi tiết công việc..."
+                        ></textarea>
+                      </div>
+                      <div class="add-result">
+                        <span class="name">Kết quả: </span>
+                        <textarea
+                          id="result-work-form"
+                          class=""
+                          rows="2"
+                          placeholder="Nhập chi tiết công việc..."
+                        ></textarea>
+                      </div>
+                    </td>
+                    <td colspan="3">
+                      <div class="control">
+                        <div onclick="update()" class="click edit blue-text">
+                          <span
+                            class="icon material-icons material-symbols-outlined"
+                          >
+                            update
+                          </span>
+                          <span>Cập nhật</span>
+                        </div>
+
+                        <div class="remove red-text">
+                          <span
+                            class="icon material-icons material-symbols-outlined"
+                          >
+                            delete
+                          </span>
+                          <span>Xoá</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+
+              <div class="last-detail-todolist">
+                <div class="advice blue-text">
+                  Tôi biết bạn sẽ làm tốt mà. Hãy hoàn thành thật sớm nhé!
+                </div>
+                <div class="control">
+                  <div
+                    onclick="showFormCreate()"
+                    class="click box-shadow add button-control"
+                  >
+                    <span class="icon material-icons material-symbols-outlined">
+                      add
+                    </span>
+                    <span>Thêm công việc</span>
+                  </div>
+                  <div class="box-shadow check-out button-control">
+                    <span class="icon material-icons material-symbols-outlined">
+                      done
+                    </span>
+                    <span class="click">check-out</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="todolist-history box-shadow">
+              <ul class="title-history">
+                <li class="collum name-title">
+                  <h1 class="title-name">LỊCH SỬ TODOLIST</h1>
+                </li>
+                <li class="collum">
+                  <div class="dropdown click">
+                    <div class="dropdown-trigger">
+                      <span class="text">Tuần này</span>
+                      <span
+                        class="icon material-icons material-symbols-outlined"
+                      >
+                        arrow_drop_down
+                      </span>
+                    </div>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-content">
+                        <p class="dropdown-item">Tuần này</p>
+                        <p class="dropdown-item">Tuần trước</p>
+                        <p class="dropdown-item">Tháng này</p>
+                        <p class="dropdown-item">Tháng trước</p>
+                        <p class="dropdown-item">Quý này</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <table class="table-history-todolist">
+                <thead>
+                  <tr>
+                    <th>Thành viên</th>
+                    <th>Ngày check-in</th>
+                    <th>Ngày check-out</th>
+                    <th>Hoàn thành</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="info-user">
+                    <td colspan="5">
+                      <div class="user-item">
+                        <img
+                          class="img-40x40 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+
+                        <div>
+                          <div class="name">Lương Thanh Thắng</div>
+                          <div class="team grey-text">
+                            DOCORP / CONANDO / Team Dev
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="day">
+                        <span>31/01/2023</span>
+                        <span
+                          class="load-more click icon material-icons material-symbols-outlined"
+                        >
+                          play_arrow
+                        </span>
+                      </div>
+
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                    </td>
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      0/1 - 0%
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                    </td>
+                    <td>
+                      Đã xác nhận
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="day">
+                        <span>31/01/2023</span>
+                        <span
+                          class="load-more click icon material-icons material-symbols-outlined"
+                        >
+                          play_arrow
+                        </span>
+                      </div>
+
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                    </td>
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      0/1 - 0%
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                    </td>
+                    <td>
+                      Đã xác nhận
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="info-user">
+                    <td colspan="5">
+                      <div class="user-item">
+                        <img
+                          class="img-40x40 avatar"
+                          src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                          alt=""
+                        />
+
+                        <div>
+                          <div class="name">Lương Thanh Thắng</div>
+                          <div class="team grey-text">
+                            DOCORP / CONANDO / Team Dev
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="day">
+                        <span>31/01/2023</span>
+                        <span
+                          class="load-more click icon material-icons material-symbols-outlined"
+                        >
+                          play_arrow
+                        </span>
+                      </div>
+
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                    </td>
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      0/1 - 0%
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                    </td>
+                    <td>
+                      Đã xác nhận
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="day">
+                        <span>31/01/2023</span>
+                        <span
+                          class="load-more click icon material-icons material-symbols-outlined"
+                        >
+                          play_arrow
+                        </span>
+                      </div>
+
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                      <div
+                        class="title-detail"
+                        onclick="this.classList.toggle('reset-text-overflow')"
+                      >
+                        • Hoàn thành bài tập giao diện Đội nhóm - Todolist
+                      </div>
+                    </td>
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Phân loại: </span>
+                        <span>Kế hoạch</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>30/01 - 17:37</span>
+                      <span class="status-done">Đúng hạn</span>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                      <div class="title-detail">
+                        <span class="grey-text">Ưu tiên: </span>
+                        <span class="green-text">Bình thường</span>
+                      </div>
+                    </td>
+
+                    <td>
+                      0/1 - 0%
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                      <div class="title-detail">
+                        <span> 08:30 - 12:00</span>
+                      </div>
+                    </td>
+                    <td>
+                      Đã xác nhận
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                      <div class="title-detail">
+                        <span>Todo</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script language="JavaScript" type="text/javascript" src="assets/js/index.js"></script>
+  </body>
+</html>
