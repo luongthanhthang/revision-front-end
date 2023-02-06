@@ -366,21 +366,6 @@ function showFormCreate() {
   filterTodoListTable();
 }
 
-function deleteFormCreate(elementDelete) {
-  if (
-    confirm(
-      `Bạn có chắc muốn xóa: ${
-        elementDelete.parentElement.parentElement.parentElement.previousElementSibling.querySelector(
-          ".name-work-form"
-        ).value
-      }?`
-    )
-  ) {
-    elementDelete.parentElement.parentElement.parentElement.previousElementSibling.remove();
-    elementDelete.parentElement.parentElement.parentElement.remove();
-  }
-}
-
 function create(selectElementCreate) {
   let elementCreateAddWork =
     selectElementCreate.parentElement.parentElement.parentElement
@@ -528,6 +513,22 @@ function create(selectElementCreate) {
 </tr>
   `;
   filterTodoListTable();
+  checkAdvice();
+}
+
+function deleteFormCreate(elementDelete) {
+  if (
+    confirm(
+      `Bạn có chắc muốn xóa: ${
+        elementDelete.parentElement.parentElement.parentElement.previousElementSibling.querySelector(
+          ".name-work-form"
+        ).value
+      }?`
+    )
+  ) {
+    elementDelete.parentElement.parentElement.parentElement.previousElementSibling.remove();
+    elementDelete.parentElement.parentElement.parentElement.remove();
+  }
 }
 
 function deleteTodoList(elementDelete, id) {
@@ -713,7 +714,11 @@ function showFormEdit(elementEdit, index) {
     endTimeArray.push(item.value);
   });
 
+  // console.log(startTimeWorkForm[0].value);
+  // console.log(startTimeWorkForm[1].value);
   selectOptionTime();
+  // console.log(startTimeWorkForm[0].value);
+  // console.log(startTimeWorkForm[1].value);
 
   categoryWorkForm.forEach((item, index) => {
     dataFormTable.querySelectorAll(".category-work-form")[index].value =
@@ -917,6 +922,7 @@ function update(elementEdit, index) {
 </tr>
   `;
   filterTodoListTable();
+  checkAdvice();
 }
 
 // background-color status-work
@@ -938,6 +944,7 @@ function updateStatusWork(elementChange, idElement = -1) {
     ).innerText = elementChange.innerText;
     changeColorStatus();
   }
+  checkAdvice();
 }
 
 function changeColorStatus() {
@@ -1054,4 +1061,21 @@ function filterTodoListTable() {
     }
   });
   changeColorStatus();
+}
+
+function checkAdvice() {
+  let todoLists = localStorage.getItem("todoLists")
+    ? JSON.parse(localStorage.getItem("todoLists"))
+    : [];
+  if (
+    todoLists.every((item) => {
+      return item.statusWorkValue === "Done";
+    })
+  ) {
+    document.querySelector(".last-detail-todolist .advice").innerText =
+      "Quá tuyệt vời, bạn đã hoàn thành Todolist của hôm nay :)";
+  } else {
+    document.querySelector(".last-detail-todolist .advice").innerText =
+      "Tôi biết bạn sẽ làm tốt mà. Hãy hoàn thành thật sớm nhé!";
+  }
 }
