@@ -20,102 +20,97 @@ function onloadLocalStorageTodoList() {
     ? JSON.parse(localStorage.getItem("todoLists"))
     : [];
   if (todoLists.length === 0) return false;
-
-  controlTodoList(todoLists);
-}
-
-function controlTodoList(todoLists) {
   let result = "";
   todoLists.forEach((item, index) => {
     result += `
-                  <tr>
-                    <td class="blue-text">${item.nameWorkForm}</td>
-                    <td>${item.categoryWorkForm}</td>
-                    <td class ="priority-work">${item.priorityWorkForm}</td>
-                    <td>${item.startTimeWorkForm}</td>
-                    <td>${item.endTimeWorkForm}</td>
-                    <td>
-                    <div class="dropdown click">
-                    <div class="dropdown-trigger">
-                      <span class="status-work-value"> ${item.statusWorkValue} </span>
-                      <span
-                        class="material-icons material-symbols-outlined"
-                      >
-                        arrow_drop_down
-                      </span>
-                    </div>
-                    <div class="dropdown-menu">
-                      <div class="dropdown-content">
-                        <div
+                    <tr>
+                      <td class="blue-text">${item.nameWorkForm}</td>
+                      <td  class ="category-work">${item.categoryWorkForm}</td>
+                      <td class ="priority-work">${item.priorityWorkForm}</td>
+                      <td>${item.startTimeWorkForm}</td>
+                      <td>${item.endTimeWorkForm}</td>
+                      <td>
+                      <div class="dropdown click">
+                      <div class="dropdown-trigger">
+                        <span class="status-work-value"> ${item.statusWorkValue} </span>
+                        <span
+                          class="material-icons material-symbols-outlined"
+                        >
+                          arrow_drop_down
+                        </span>
+                      </div>
+                      <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                          <div
+                            onclick="updateStatusWork(this, ${index})"
+                            class="dropdown-item"
+                          >
+                            Todo
+                          </div>
+                          <div
                           onclick="updateStatusWork(this, ${index})"
                           class="dropdown-item"
-                        >
-                          Todo
-                        </div>
-                        <div
-                        onclick="updateStatusWork(this, ${index})"
-                        class="dropdown-item"
-                        >
-                          Pending
-                        </div>
-                        <div
-                        onclick="updateStatusWork(this, ${index})"
-                        class="dropdown-item"
-                        >
-                          Doing
-                        </div>
-                        <div
-                        onclick="updateStatusWork(this, ${index})"
-                        class="dropdown-item"
-                        >
-                          Done
-                        </div>
-                        <div
-                        onclick="updateStatusWork(this, ${index})"
-                        class="dropdown-item"
-                        >
-                          Cancel
+                          >
+                            Pending
+                          </div>
+                          <div
+                          onclick="updateStatusWork(this, ${index})"
+                          class="dropdown-item"
+                          >
+                            Doing
+                          </div>
+                          <div
+                          onclick="updateStatusWork(this, ${index})"
+                          class="dropdown-item"
+                          >
+                            Done
+                          </div>
+                          <div
+                          onclick="updateStatusWork(this, ${index})"
+                          class="dropdown-item"
+                          >
+                            Cancel
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="3">
-                      <div>
-                        <span>Chi tiết:</span>
-                        <span class="detail-display">${item.detailWorkForm}</span>
-                      </div>
-                      <div>
-                        <span>Kết quả:</span>
-                        <span class="result-display">${item.resultWorkForm}</span>
-                      </div>
-                    </td>
-                    <td colspan="3">
-                      <div class="control" >
-                        <div class="click edit blue-text" onclick ="showFormEdit(this, ${index})">
-                          <span
-                            class="icon material-icons material-symbols-outlined"
-                          >
-                            edit
-                          </span>
-                          <span>Chỉnh sửa</span>
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td colspan="3">
+                        <div>
+                          <span>Chi tiết:</span>
+                          <span class="detail-display">${item.detailWorkForm}</span>
                         </div>
-
-                        <div class="click remove red-text" onclick="deleteTodoList(${index})">
-                          <span
-                            class="icon material-icons material-symbols-outlined"
-                          >
-                            delete
-                          </span>
-                          <span>Xoá</span>
+                        <div>
+                          <span>Kết quả:</span>
+                          <span class="result-display">${item.resultWorkForm}</span>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
-    `;
+                      </td>
+                      <td colspan="3">
+                        <div class="control" >
+                          <div class="click edit blue-text" onclick ="showFormEdit(this, ${index})">
+                            <span
+                              class="icon material-icons material-symbols-outlined"
+                            >
+                              edit
+                            </span>
+                            <span>Chỉnh sửa</span>
+                          </div>
+  
+                          <div class="click remove red-text" onclick="deleteTodoList(this, ${index})">
+                            <span
+                              class="icon material-icons material-symbols-outlined"
+                            >
+                              delete
+                            </span>
+                            <span>Xoá</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+      `;
   });
   document.getElementById("view-todolist").innerHTML = result;
   filterTodoListTable();
@@ -368,8 +363,7 @@ function showFormCreate() {
     dataFormTable.querySelectorAll(".status-work-value")[index].innerText =
       item.innerText;
   });
-  // lọc thông tin và màu
-  changeColorPriority();
+  filterTodoListTable();
 }
 
 function deleteFormCreate(elementDelete) {
@@ -442,7 +436,7 @@ function create(selectElementCreate) {
   elementCreateAddWork.outerHTML = `
   <tr>
   <td class="blue-text">${todoListItem.nameWorkForm}</td>
-  <td>${todoListItem.categoryWorkForm}</td>
+  <td class ="category-work">${todoListItem.categoryWorkForm}</td>
   <td class ="priority-work">${todoListItem.priorityWorkForm}</td>
   <td>${todoListItem.startTimeWorkForm}</td>
   <td>${todoListItem.endTimeWorkForm}</td>
@@ -519,7 +513,7 @@ function create(selectElementCreate) {
         <span>Chỉnh sửa</span>
       </div>
 
-      <div class="click remove red-text" onclick="deleteTodoList(${
+      <div class="click remove red-text" onclick="deleteTodoList(this, ${
         todoLists.length - 1
       })">
         <span
@@ -536,14 +530,15 @@ function create(selectElementCreate) {
   filterTodoListTable();
 }
 
-function deleteTodoList(id) {
+function deleteTodoList(elementDelete, id) {
   let todoLists = localStorage.getItem("todoLists")
     ? JSON.parse(localStorage.getItem("todoLists"))
     : [];
   if (confirm(`Bạn có chắc muốn xóa: ${todoLists[id].nameWorkForm}?`)) {
     todoLists.splice(id, 1);
     localStorage.setItem("todoLists", JSON.stringify(todoLists));
-    controlTodoList(todoLists);
+    elementDelete.parentElement.parentElement.parentElement.previousElementSibling.remove();
+    elementDelete.parentElement.parentElement.parentElement.remove();
   } else {
     return;
   }
@@ -561,6 +556,7 @@ function showFormEdit(elementEdit, index) {
   let elementCreateDetailAddWork =
     elementEdit.parentElement.parentElement.parentElement;
 
+  let elementPrevious = elementCreateAddWork.previousElementSibling;
   elementCreateAddWork.outerHTML = ` 
   <tr class="add-work">
   <td>
@@ -686,7 +682,7 @@ function showFormEdit(elementEdit, index) {
         <span>Cập nhật</span>
       </div>
 
-      <div onclick="deleteTodoList(${index})" class="click remove red-text">
+      <div onclick="deleteTodoList(this, ${index})" class="click remove red-text">
         <span
           class="icon material-icons material-symbols-outlined"
         >
@@ -698,17 +694,81 @@ function showFormEdit(elementEdit, index) {
   </td>
 </tr>
   `;
-  filterTodoListTable();
-  let dataFormTable = document.getElementById("view-todolist");
 
-  dataFormTable.querySelector(".category-work-form").value =
-    todoItem.categoryWorkForm;
-  dataFormTable.querySelector(".priority-work-form").value =
-    todoItem.priorityWorkForm;
-  dataFormTable.querySelector(".start-time-work-form").value =
-    todoItem.startTimeWorkForm;
-  dataFormTable.querySelector(".end-time-work-form").value =
-    todoItem.endTimeWorkForm;
+  // lấy lại giá trị form chưa cập nhật
+  let dataFormTable = document.getElementById("view-todolist");
+  let categoryWorkForm = dataFormTable.querySelectorAll(".category-work-form");
+  let priorityWorkForm = dataFormTable.querySelectorAll(".priority-work-form");
+  let startTimeWorkForm = dataFormTable.querySelectorAll(
+    ".start-time-work-form"
+  );
+  let endTimeWorkForm = dataFormTable.querySelectorAll(".end-time-work-form");
+  let startTimeArray = [];
+  startTimeWorkForm.forEach((item) => {
+    startTimeArray.push(item.value);
+  });
+
+  let endTimeArray = [];
+  endTimeWorkForm.forEach((item) => {
+    endTimeArray.push(item.value);
+  });
+
+  selectOptionTime();
+
+  categoryWorkForm.forEach((item, index) => {
+    dataFormTable.querySelectorAll(".category-work-form")[index].value =
+      item.value;
+  });
+  priorityWorkForm.forEach((item, index) => {
+    dataFormTable.querySelectorAll(".priority-work-form")[index].value =
+      item.value;
+  });
+  startTimeWorkForm.forEach((item, index) => {
+    if (item.value === null) {
+      dataFormTable.querySelectorAll(".start-time-work-form")[index].value =
+        item.getAttribute("value");
+    } else {
+      dataFormTable.querySelectorAll(".start-time-work-form")[index].value =
+        startTimeArray[index];
+    }
+  });
+
+  endTimeWorkForm.forEach((item, index) => {
+    if (item.value === null) {
+      dataFormTable.querySelectorAll(".end-time-work-form")[index].value =
+        item.getAttribute("value");
+    } else {
+      dataFormTable.querySelectorAll(".end-time-work-form")[index].value =
+        endTimeArray[index];
+    }
+  });
+
+  // cập nhật show form mới
+  if (elementPrevious == null) {
+    dataFormTable.querySelector(".category-work-form").value =
+      todoItem.categoryWorkForm;
+    dataFormTable.querySelector(".priority-work-form").value =
+      todoItem.priorityWorkForm;
+    dataFormTable.querySelector(".start-time-work-form").value =
+      todoItem.startTimeWorkForm;
+    dataFormTable.querySelector(".end-time-work-form").value =
+      todoItem.endTimeWorkForm;
+  } else {
+    elementPrevious.nextElementSibling.querySelector(
+      ".category-work-form"
+    ).value = todoItem.categoryWorkForm;
+    elementPrevious.nextElementSibling.querySelector(
+      ".priority-work-form"
+    ).value = todoItem.priorityWorkForm;
+    elementPrevious.nextElementSibling.querySelector(
+      ".start-time-work-form"
+    ).value = todoItem.startTimeWorkForm;
+    elementPrevious.nextElementSibling.querySelector(
+      ".end-time-work-form"
+    ).value = todoItem.endTimeWorkForm;
+  }
+
+  filterTodoListTable();
 }
 
 function update(elementEdit, index) {
@@ -765,7 +825,7 @@ function update(elementEdit, index) {
   elementEditAddWork.outerHTML = `
   <tr>
   <td class="blue-text">${todoListItem.nameWorkForm}</td>
-  <td>${todoListItem.categoryWorkForm}</td>
+  <td class ="category-work">${todoListItem.categoryWorkForm}</td>
   <td class ="priority-work">${todoListItem.priorityWorkForm}</td>
   <td>${todoListItem.startTimeWorkForm}</td>
   <td>${todoListItem.endTimeWorkForm}</td>
@@ -842,7 +902,7 @@ function update(elementEdit, index) {
         <span>Chỉnh sửa</span>
       </div>
 
-      <div class="click remove red-text" onclick="deleteTodoList(${
+      <div class="click remove red-text" onclick="deleteTodoList(this, ${
         todoLists.length - 1
       })">
         <span
@@ -936,6 +996,22 @@ function changeColorPriority() {
   });
 }
 
+function changeColorCategory() {
+  document.querySelectorAll(".category-work").forEach((item) => {
+    switch (item.innerText) {
+      case "Kế hoạch":
+        item.setAttribute("class", "category-work black-text");
+        break;
+      case "Cấp trên giao":
+        item.setAttribute("class", "category-work blue-text");
+        break;
+      case "Đột xuất":
+        item.setAttribute("class", "category-work red-text");
+        break;
+    }
+  });
+}
+
 function selectOptionTime() {
   let result = "";
   for (let hour = 7; hour <= 23; hour++) {
@@ -962,10 +1038,9 @@ function selectOptionTime() {
 }
 
 function filterTodoListTable() {
-  // select time
-  selectOptionTime();
   // lọc thông tin và màu
   changeColorPriority();
+  changeColorCategory();
   // ẩn những thứ không nhập
   document.querySelectorAll(".detail-display").forEach((item) => {
     if (item.innerText === "") {
