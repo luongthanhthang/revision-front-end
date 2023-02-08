@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Đào tạo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e1f8756e73.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="getCookieSidebar('sidebarChange')">
+    <div class="main">
+      <aside class="" id="sidebar">
+        <div class="logo-details">
+          <div>
+            <i onclick="changeSidebar()" class="fa-solid fa-bars"></i>
+          </div>
+          <span class="logo-name link-name">
+            Quý I - 2023 &nbsp; <i class="fa-solid fa-caret-down"></i>
+            <ul class="sub-menu-top">
+              <li>Quý I - 2023</li>
+              <li>Quý IV - 2022</li>
+              <li>Quý III - 2022</li>
+              <li>Quý II - 2022</li>
+              <li>Quý I - 2022</li>
+              <li>Quý IV - 2021</li>
+            </ul>
+          </span>
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-newspaper"></i>
+                <span class="link-name">Tin tức</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-chart-simple"></i>
+                <span class="link-name">Thống kê</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-people-group"></i>
+                <span class="link-name">Đội nhóm</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-regular fa-square-check"></i>
+                <span class="link-name">Todolist</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-bullseye"></i>
+                <span class="link-name">OKRs</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a>Thiết lập</a></li>
+              <li><a>Hành động</a></li>
+              <li><a>Tổng quan</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-regular fa-star"></i>
+                <span class="link-name">CFRs</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a>Check-in</a></li>
+              <li><a>Ghi nhận - Tặng sao</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-bolt"></i>
+                <span class="link-name">Kaizen</span>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-gift"></i>
+                <span class="link-name">Đổi quà</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li>
+                <a>Cửa hàng</a>
+              </li>
+              <li><a>Lịch sử đổi quà</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-book"></i>
+                <span class="link-name">Đào tạo</span>
+              </a>
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="sub-menu">
+              <li>
+                <a>Khoá học</a>
+              </li>
+              <li><a>Quản lý khoá học</a></li>
+              <li><a>Chấm bài thi</a></li>
+              <li><a>Cấp chứng chỉ</a></li>
+              <li><a>Chứng chỉ đạt được</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="icon-links">
+              <a>
+                <i class="fa-solid fa-person"></i>
+                <span class="link-name">Tài khoản</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="sign-out">
+          <div class="icon-links">
+            <a>
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span class="link-name">Đăng xuất</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <div class="content">
+        <div class="header">
+          <ul class="header-info">
+            <li class="avatar">
+              <div class="img-24x24">
+                <img
+                  src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="name">
+              <span>Lương Thanh Thắng</span>
+            </li>
+          </ul>
+
+          <ul class="notification">
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+          </ul>
+        </div>
+        <div class="dao-tao">
+          <ul class="title-top">
+            <li class="title-right">
+              <div class="info-user">
+                <div class="card-content box-shadow">
+                  <div class="img-avatar">
+                    <img
+                      src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="info-content">
+                    <h2 class="blue-text uppercase">Lương Thanh Thắng</h2>
+                    <p class="uppercase">DOCORP</p>
+                    <p>
+                      <i class="fa-solid fa-l"></i
+                      ><span class="uppercase">&nbsp;&nbsp;CONANDO</span>
+                    </p>
+                    <p>
+                      &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-l"></i
+                      ><span style="text-transform: capitalize"
+                        >&nbsp;&nbsp;Team dev</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="result">
+                <li>
+                  <div class="card box-shadow">
+                    <div class="card-content">
+                      <p style="color: #355cba">
+                        <i class="fa-regular fa-circle-check"></i>&nbsp;0
+                      </p>
+                      <p>Chứng chỉ đã đạt</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="card box-shadow">
+                    <div class="card-content">
+                      <p style="color: #e5bf54">
+                        <i class="fa-solid fa-book-open"></i>&nbsp;0
+                      </p>
+                      <p>Khoá học đã tham gia</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="card box-shadow">
+                    <div class="card-content">
+                      <p style="color: #48c78e">
+                        <i class="fa-solid fa-bolt"></i>&nbsp;125
+                      </p>
+                      <p>Xếp hạng học tập</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="advice">
+                <div class="content blue-text">
+                  <i>"Be yourself; everyone else is already taken."</i>
+                </div>
+                <div class="author"><span>— Oscar Wilde</span></div>
+              </div>
+            </li>
+
+            <li class="title-left">
+              <div class="card">
+                <div class="card-content box-shadow">
+                  <h2 class="uppercase">HỌC TIẾP BẠN ƠI !</h2>
+                  <table class="current-course-table">
+                    <tr>
+                      <td>
+                        <div class="img-64x64">
+                          <img
+                            src="https://work.conando.vn/upload/220525/225PFA3C52.png"
+                            width="100%"
+                            alt=""
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="uppercase font-weight-bold title">
+                          NEW DO TALENT
+                        </div>
+                        <div class="range">
+                          <p class="complete"></p>
+                          <p class="no-complete"></p>
+                          <p>57%</p>
+                        </div>
+                        <div class="author-time">
+                          <div class="time">
+                            <i class="fa-solid fa-clock icon-color"></i>
+                            <span>60 giờ</span>
+                          </div>
+                          <div class="author">
+                            <i class="fa-solid fa-user icon-color"></i>
+                            <span>Hoàng Thuý Phượng</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <button>
+                          <span> Tiếp tục </span>
+                          <i class="fa-solid fa-caret-right"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="feature-course">
+            <div class="card">
+              <h2 class="uppercase title">Khoá học nổi bật</h2>
+
+              <ul class="course-list">
+                <li class="course-item">
+                  <div class="course-card">
+                    <div class="card-image">
+                      <img
+                        src="https://work.conando.vn/upload/220525/225PFA3C52.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="course-content">
+                      <div class="author">
+                        <div class="avatar">
+                          <img
+                            src="https://avatars.dicebear.com/api/adventurer-neutral/68A28E331E.svg"
+                            alt=""
+                          />
+                          <span class="name">Hoàng Thuỳ Phương</span>
+                          <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <p class="uppercase">new do talent</p>
+                      </div>
+
+                      <div class="content">
+                        <ul class="card-course-content">
+                          <li>
+                            <i class="fa-solid fa-star icon-color"></i>&nbsp;
+                            <span>0 đánh giá</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-book icon-color"></i>&nbsp;
+                            <span>23 bài học</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-clock icon-color"></i>&nbsp;
+                            <span>30</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-user icon-color"></i>&nbsp;
+                            <span>39 đã học</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="course-item">
+                  <div class="course-card">
+                    <div class="card-image">
+                      <img
+                        src="https://work.conando.vn/upload/220525/225PFA3C52.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="course-content">
+                      <div class="author">
+                        <div class="avatar">
+                          <img
+                            src="https://avatars.dicebear.com/api/adventurer-neutral/68A28E331E.svg"
+                            alt=""
+                          />
+                          <span class="name">Hoàng Thuỳ Phương</span>
+                          <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <p class="uppercase">new do talent</p>
+                      </div>
+
+                      <div class="content">
+                        <ul class="card-course-content">
+                          <li>
+                            <i class="fa-solid fa-star icon-color"></i>&nbsp;
+                            <span>0 đánh giá</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-book icon-color"></i>&nbsp;
+                            <span>23 bài học</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-clock icon-color"></i>&nbsp;
+                            <span>30</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-user icon-color"></i>&nbsp;
+                            <span>39 đã học</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="course-item">
+                  <div class="course-card">
+                    <div class="card-image">
+                      <img
+                        src="https://work.conando.vn/upload/220525/225PFA3C52.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="course-content">
+                      <div class="author">
+                        <div class="avatar">
+                          <img
+                            src="https://avatars.dicebear.com/api/adventurer-neutral/68A28E331E.svg"
+                            alt=""
+                          />
+                          <span class="name">Hoàng Thuỳ Phương</span>
+                          <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <p class="uppercase">new do talent</p>
+                      </div>
+
+                      <div class="content">
+                        <ul class="card-course-content">
+                          <li>
+                            <i class="fa-solid fa-star icon-color"></i>&nbsp;
+                            <span>0 đánh giá</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-book icon-color"></i>&nbsp;
+                            <span>23 bài học</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-clock icon-color"></i>&nbsp;
+                            <span>30</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-user icon-color"></i>&nbsp;
+                            <span>39 đã học</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="course-item">
+                  <div class="course-card">
+                    <div class="card-image">
+                      <img
+                        src="https://work.conando.vn/upload/220525/225PFA3C52.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="course-content">
+                      <div class="author">
+                        <div class="avatar">
+                          <img
+                            src="https://avatars.dicebear.com/api/adventurer-neutral/68A28E331E.svg"
+                            alt=""
+                          />
+                          <span class="name">Hoàng Thuỳ Phương</span>
+                          <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <p class="uppercase">new do talent</p>
+                      </div>
+
+                      <div class="content">
+                        <ul class="card-course-content">
+                          <li>
+                            <i class="fa-solid fa-star icon-color"></i>&nbsp;
+                            <span>0 đánh giá</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-book icon-color"></i>&nbsp;
+                            <span>23 bài học</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-clock icon-color"></i>&nbsp;
+                            <span>30</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-user icon-color"></i>&nbsp;
+                            <span>39 đã học</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="course-item">
+                  <div class="course-card">
+                    <div class="card-image">
+                      <img
+                        src="https://work.conando.vn/upload/220525/225PFA3C52.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="course-content">
+                      <div class="author">
+                        <div class="avatar">
+                          <img
+                            src="https://avatars.dicebear.com/api/adventurer-neutral/68A28E331E.svg"
+                            alt=""
+                          />
+                          <span class="name">Hoàng Thuỳ Phương</span>
+                          <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                      </div>
+                      <div class="title">
+                        <p class="uppercase">new do talent</p>
+                      </div>
+
+                      <div class="content">
+                        <ul class="card-course-content">
+                          <li>
+                            <i class="fa-solid fa-star icon-color"></i>&nbsp;
+                            <span>0 đánh giá</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-book icon-color"></i>&nbsp;
+                            <span>23 bài học</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-clock icon-color"></i>&nbsp;
+                            <span>30</span>
+                          </li>
+
+                          <li>
+                            <i class="fa-solid fa-user icon-color"></i>&nbsp;
+                            <span>39 đã học</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div>
+                <p class="load-more">Xem thêm</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-category">
+            <h2 class="uppercase title">Danh mục khoá học</h2>
+            <div class="category">
+              <div class="category-list">
+                <ul class="title-list">
+                  <li class="title-item">
+                    <div class="category-card">
+                      <div class="img-64x64">
+                        <img
+                          src="https://work.conando.vn/upload/220222/637810866596127875.png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Bán hàng</h5>
+                    </div>
+                  </li>
+
+                  <li class="title-item">
+                    <div class="category-card">
+                      <div class="img-64x64">
+                        <img
+                          src="https://work.conando.vn/upload/220222/637810866596127875.png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Bán hàng</h5>
+                    </div>
+                  </li>
+
+                  <li class="title-item">
+                    <div class="category-card">
+                      <div class="img-64x64">
+                        <img
+                          src="https://work.conando.vn/upload/220222/637810866596127875.png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Bán hàng</h5>
+                    </div>
+                  </li>
+
+                  <li class="title-item">
+                    <div class="category-card">
+                      <div class="img-64x64">
+                        <img
+                          src="https://work.conando.vn/upload/220222/637810866596127875.png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Bán hàng</h5>
+                    </div>
+                  </li>
+
+                  <li class="title-item">
+                    <div class="category-card">
+                      <div class="img-64x64">
+                        <img
+                          src="https://work.conando.vn/upload/220222/637810866596127875.png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Bán hàng</h5>
+                    </div>
+                  </li>
+
+                  <li class="title-item">
+                    <div class="category-card">
+                      <div class="img-64x64">
+                        <img
+                          src="https://work.conando.vn/upload/220222/637810866596127875.png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Bán hàng</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="category-detail">
+                <div class="card box-shadow">
+                  <h2 class="title">Bán hàng</h2>
+
+                  <div class="scroll-table">
+                    <table class="course-table">
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="img-64x64 card-item">
+                            <img
+                              src="https://work.conando.vn/upload/220301/637817306111103988.gif"
+                              alt=""
+                            />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="full-text">
+                            - KHỐI KD: QT1 - LÊN KẾ HOẠCH: LIÊN HỆ KHÁCH HÀNG
+                          </span>
+                          <ul class="course-directory-item">
+                            <li>
+                              <i class="fa-solid fa-star icon-color"></i>
+                              <span>0 đánh giá</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-book icon-color"></i>
+                              <span>23 bài học</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-clock icon-color"></i>
+                              <span>30</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-user icon-color"></i>
+                              <span>Đoàn Thanh</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

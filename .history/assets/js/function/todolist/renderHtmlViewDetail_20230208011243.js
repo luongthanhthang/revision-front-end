@@ -1,5 +1,4 @@
 export default function renderHtmlViewDetail(todoListItem) {
-  let todoListItem = JSON.parse(item);
     return `<td colspan="3">
     <div>
       <span>Chi tiết:</span>
