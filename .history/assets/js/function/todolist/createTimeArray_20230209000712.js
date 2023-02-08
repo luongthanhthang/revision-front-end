@@ -9,11 +9,11 @@ export default function createTimeArray(start, finish, step) {
   let current = [startHour, startMin];
 
   // let object = {};
-  let arrayTimeResult = [];
+  let 2 = [];
   let index = 0;
 
   while (current[0] < endHour || Boolean(current[0] === endHour && current[1] <= endMin)) {
-    arrayTimeResult[index] =
+    object[index] =
       (current[0] < 10 ? "0" + current[0] : current[0]) + ":" + (current[1] < 10 ? "0" + current[1] : current[1]);
     if (current[1] + step >= 60) {
       current[1] = current[1] + step - 60;
@@ -23,5 +23,5 @@ export default function createTimeArray(start, finish, step) {
     }
     index++;
   }
-  return arrayTimeResult;
+  return object;
 }
