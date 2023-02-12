@@ -1,0 +1,3 @@
+class PlanWeek{
+    name: w
+}
