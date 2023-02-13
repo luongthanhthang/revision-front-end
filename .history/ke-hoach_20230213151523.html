@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ke hoạch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/ke_hoach.css"/>
+    <link rel="stylesheet" href="assets/css/bulma/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/e1f8756e73.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  </head>
+  <body>
+    <div id = "main" class="columns is-gapless">
+      <aside class="column is-narrow">
+        <section id="sidebar"></section>
+      </aside>
+      <section id="plan-content" class="column">
+        <header id="header" class="main-header">
+          <ul class="columns is-vcentered">
+            <li class="column">
+              <div class="icon-text">
+                <span class="icon image is-24x24">
+                  <img class="is-rounded" src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg">
+                </span>
+                <span class="has-text-black has-text-weight-medium font-14 ml-3">Lương Thanh Thắng</span>
+              </div>
+            </li>
+            <li class="column is-narrow px-2">
+              <div>
+                <span class="icon">
+                  <span class="material-icons is-size-6">mail_outline</span>
+                </span>
+              </div>
+            </li>
+            <li class="column is-narrow px-2">
+              <div>
+                <span class="icon">
+                  <span class="material-icons material-icons-outlined is-size-6">dashboard</span>
+                </span>
+              </div>
+            </li>
+            <li class="column is-narrow px-2">
+              <div>
+                <span class="icon">
+                  <span class="material-icons material-icons-outlined is-size-6">star_outline</span>
+                </span>
+              </div>
+            </li>
+            <li class="column is-narrow px-2">
+              <div>
+                <span class="icon">
+                  <span class="material-icons material-icons-outlined is-size-6">view_timeline</span>
+                </span>
+              </div>
+            </li>
+            <li class="column is-narrow px-2">
+              <div>
+                <span class="icon">
+                  <span class="material-icons material-icons-outlined is-size-6">book</span>
+                </span>
+              </div>
+            </li>
+            <li class="column is-narrow pl-2 pr-5">
+              <div>
+                <span class="icon">
+                  <span class="material-icons material-icons-outlined is-size-6">notifications</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </header>
+
+        <section class="main-content columns">
+          <div id="nav-plan" class="nav column is-narrow">
+            <div class="py-3 team">
+              <div class="px-3">
+                <span class="icon-text p-1">
+                  <span class="icon image is-24x24 mr-2">
+                    <img class="is-rounded" src="https://avatars.dicebear.com/api/adventurer-neutral/231441AAFA.svg" alt="AVA">
+                  </span>
+                  <span class="has-text-grey font-14">Công việc của tôi</span>
+                </span>
+              </div>
+
+              <hr class="my-3 has-background-grey-lighter">
+
+              <div class="control has-icons-left has-icons-right px-3">
+                <input class="input is-rounded is-small has-background-primary-light" type="text" placeholder="Tiêu đề kế hoạch">
+                <span class="icon is-small is-left pl-5">
+                  <span class="material-icons material-icons-outlined">search</span>
+                </span>
+              </div>
+
+              <div class="dropdown px-3 mt-3" style="width: 100%;">
+                <div class="dropdown-trigger" style="width: 100%;">
+                  <span class="icon-text is-justify-content-space-between" style="width: 100%;">
+                    <span class="is-size-7">Sắp xếp theo</span>
+                    <span class="icon material-icons material-icons-outlined">arrow_drop_down</span>
+                   </span>
+                </div>
+                <div class="dropdown-menu ml-2" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <span class="is-size-7">Tiêu đề A-Z</span>
+                    </div>
+                    <div class="dropdown-item">
+                      <span class="is-size-7">Tiêu đề Z-A</span>
+                    </div>
+                    <div class="dropdown-item">
+                      <span class="is-size-7">Ngày tạo mới nhất</span>
+                    </div>
+                    <div class="dropdown-item">
+                      <span class="is-size-7">Ngày tạo cũ nhất</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-3 has-background-white-ter">
+
+              <div class="dropdown px-3" style="width: 100%;">
+                <div class="dropdown-trigger" style="width: 100%;">
+                  <span class="icon-text is-justify-content-space-between" style="width: 100%;">
+                    <div class="is-flex is-align-content-center">
+                      <span class="icon mr-2" style="border-radius: 4px; background: #AEC6FF;">
+                        <span class="material-icons-outlined is-size-6">push_pin</span>
+                      </span>
+                      <span class="is-size-7">Sắp xếp theo</span>
+                    </div>
+                    <span class="icon material-icons material-icons-outlined">arrow_drop_down</span>
+                   </span>
+                </div>
+                <div class="dropdown-menu ml-2" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <span class="is-size-7">Tiêu đề A-Z</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content column">
+            <div class="content-right px-4 pb-0">
+              <div class="title-content px-3">
+                <ul class="columns m-0">
+                  <li class="column">
+                    <div class="has-text-weight-bold has-text-grey is-size-5">🍕 Plan Tuần</div>
+                  </li>
+                  <li class="column is-narrow">Tổng quan</li>
+                  <li class="column is-narrow">Công việc</li>
+                  <li class="column is-narrow">Thống kê</li>
+                  <li class="column is-narrow">
+                    <div style="width: 1px; height: 24px; background: #D9D9D9;"></div>
+                  </li>
+                  <li class="column is-narrow">
+                    <div class="dropdown is-hoverable">
+                      <div class="dropdown-trigger">
+                        <span class="icon-text">
+                          <span class="icon">
+                            <span class="material-icons">list</span>
+                          </span>
+                          <span>Chế độ List</span>
+                          <span class="material-icons material-icons-outlined">arrow_drop_down</span>
+                         </span>
+                      </div>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                          <div class="dropdown-item p-2">
+                            <a class="icon-text">
+                              <span class="icon">
+                                <span class="material-icons is-size-5">list</span>
+                              </span>
+                              <span>Chế độ List</span>
+                             </a>
+                          </div>
+                          <div class="dropdown-item p-2">
+                            <a class="icon-text">
+                              <span class="icon">
+                                <span class="material-icons is-size-5">dashboard</span>
+                              </span>
+                              <span>Chế độ Board</span>
+                             </a>
+                          </div>
+                          <div class="dropdown-item p-2">
+                            <a class="icon-text">
+                              <span class="icon">
+                                <span class="material-icons is-size-5">clear_all</span>
+                              </span>
+                              <span>Chế độ Gantt</span>
+                             </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="detail-content px-5 pt-5 pb-3 mt-4" id="plan-content">
+                <div class="main-content" id="plan-main-content">
+                  <div class="mb-5" id="filter-plan-content"> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script src="assets/js/ke-hoach.js"></script>
+  </body>
+</html>
