@@ -8,7 +8,6 @@ export default function createTimeArray(start, finish, step) {
   if (startHour === endHour && startMin > endMin) return null;
   let current = [startHour, startMin];
 
-  // let object = {};
   let arrayTimeResult = [];
   let index = 0;
 
